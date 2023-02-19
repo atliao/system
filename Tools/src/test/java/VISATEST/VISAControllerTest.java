@@ -23,14 +23,14 @@ public class VISAControllerTest {
         VISAController vController = new VISAController();
         boolean open = vController.open("ASRL2::INSTR");
         System.out.println(open);
-        vController.writeCmd("hello visa!");
+        vController.writeCmd("*IDN?");
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         String s = vController.readResult();
-        System.out.print(s  +  "***");
+        System.out.println(s);
         boolean close = vController.close();
         System.out.println(close);
     }

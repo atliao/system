@@ -36,14 +36,11 @@ public class COM3Test {
                             String curTime = YY + "-" + MM + "-" + DD + "," + HH + ":" + mm + ":" + SS + ":" + MI;
 
                             String str = portController.readmessage(serialport);
-                            System.out.println(curTime + "->" + str);
-                            try {
-                                Thread.sleep(500);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
+                            System.out.println(curTime + "-> " + str);
                             char nl = 10;
-                            portController.sendmessage(serialport,"get from COM3!" + nl);
+                            if(str.equals("*IDN?\n")){
+                                portController.sendmessage(serialport,"ID: 15184335457" + nl);
+                            }
                         }
                     });
                 }catch (TooManyListenersException e) {

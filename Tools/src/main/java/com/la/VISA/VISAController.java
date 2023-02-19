@@ -71,7 +71,7 @@ public class VISAController {
     public String readResult() {
         NativeLong a = new NativeLong(vipSession.getValue());
         Memory mem = new Memory(200);
-        int result = VISA.INSTANCE.viScanf(a, "%T", mem);
+        int result = VISA.INSTANCE.viScanf(a, "%t", mem);
         if (result != VISA.VI_SUCCESS) {
             System.out.println(result);
             return null;

@@ -1,6 +1,6 @@
 package com.la;
 
-import com.la.usb.USBController;
+import com.la.USB.USBController;
 
 import javax.usb.*;
 
