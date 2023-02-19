@@ -1,4 +1,4 @@
-package com.la.visa;
+package com.la.VISA;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
@@ -7,9 +7,9 @@ import com.sun.jna.ptr.LongByReference;
 
 /**
  * @author LA
- * @createDate 2023-02-18-18:15
+ * @createDate 2023-02-19-11:11
  */
-public interface VISA extends Library {
+public interface VISA  extends Library {
 
     VISA INSTANCE = (VISA) Native.loadLibrary("visa32", VISA.class);
 
@@ -29,5 +29,4 @@ public interface VISA extends Library {
     public int viPrintf(NativeLong vi, String writeFmt, Object... args);
 
     public int viRead(NativeLong vi, byte[] buf, NativeLong count,NativeLong retCount);
-
 }

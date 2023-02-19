@@ -1,4 +1,4 @@
-package com.la.visa;
+package com.la.VISA;
 
 import com.sun.jna.Memory;
 import com.sun.jna.NativeLong;
@@ -6,7 +6,7 @@ import com.sun.jna.ptr.LongByReference;
 
 /**
  * @author LA
- * @createDate 2023-02-18-18:16
+ * @createDate 2023-02-19-11:12
  */
 public class VISAController {
 
@@ -89,5 +89,4 @@ public class VISAController {
         System.out.println("resultCount:" + resultCount);
         return new String(buffer);
     }
-
 }

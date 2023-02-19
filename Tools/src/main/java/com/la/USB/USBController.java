@@ -1,15 +1,14 @@
-package com.la.usb;
+package com.la.USB;
 
 import javax.usb.*;
 import java.util.List;
 
 /**
  * @author LA
- * @createDate 2023-02-11-17:06
+ * @createDate 2023-02-19-11:09
  */
 
 //usb的操作
-
 public class USBController {
 
     //十六进制转十进制
@@ -197,19 +196,19 @@ public class USBController {
         byte[] buffer = new byte[64]; //规定的协议是64位
         int length;
         //while (true) {
-            System.out.println("reading...");
-            length = usbPipe.syncSubmit(buffer);
-            System.out.println("******************************************result***************************************");
-            System.out.println("length:" + length);
+        System.out.println("reading...");
+        length = usbPipe.syncSubmit(buffer);
+        System.out.println("******************************************result***************************************");
+        System.out.println("length:" + length);
 
-            String res = new String(buffer);
-            System.out.println("string:" + res);
+        String res = new String(buffer);
+        System.out.println("string:" + res);
 
-            for (int i = 0; i < length; i++) {
-                // do something
-                System.out.print(buffer[i]);
-            }
-            System.out.println();
+        for (int i = 0; i < length; i++) {
+            // do something
+            System.out.print(buffer[i]);
+        }
+        System.out.println();
         //}
     }
 
@@ -218,7 +217,4 @@ public class USBController {
         return usbPipe.syncSubmit(buffer);//阻塞
         //usbPipe.asyncSubmit(buff);//非阻塞
     }
-
-
-
 }

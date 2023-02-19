@@ -1,11 +1,11 @@
-package VISATest;
+package VISATEST;
 
-import com.la.visa.VISAController;
+import com.la.VISA.VISAController;
 import org.junit.Test;
 
 /**
  * @author LA
- * @createDate 2023-02-18-18:20
+ * @createDate 2023-02-19-11:15
  */
 public class VISAControllerTest {
 

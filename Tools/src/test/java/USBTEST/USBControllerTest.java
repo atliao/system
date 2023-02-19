@@ -1,15 +1,15 @@
-package UsbTest;
+package USBTEST;
 
-import com.la.usb.USBController;
+import com.la.USB.USBController;
 import org.junit.Test;
 
 import javax.usb.*;
 
 /**
  * @author LA
- * @createDate 2023-02-11-17:15
+ * @createDate 2023-02-19-11:15
  */
-public class UsbControllerTest {
+public class USBControllerTest {
 
     USBController usbController = new USBController();
 
@@ -64,5 +64,4 @@ public class UsbControllerTest {
         System.out.println("***" + receive + "***");
         usbController.closeInterface(iface);
     }
-
 }

@@ -4,7 +4,7 @@ import gnu.io.SerialPort;
 
 /**
  * @author LA
- * @createDate 2023-02-18-18:36
+ * @createDate 2023-02-19-11:12
  */
 public class PortParameter {
 

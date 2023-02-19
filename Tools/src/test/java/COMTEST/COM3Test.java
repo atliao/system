@@ -1,4 +1,4 @@
-package ComTest;
+package COMTEST;
 
 import com.la.port.PortController;
 import gnu.io.SerialPort;
@@ -9,7 +9,7 @@ import java.util.TooManyListenersException;
 
 /**
  * @author LA
- * @createDate 2023-02-18-10:24
+ * @createDate 2023-02-19-11:15
  */
 public class COM3Test {
 
