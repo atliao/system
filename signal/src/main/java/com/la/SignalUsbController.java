@@ -28,28 +28,28 @@ public class SignalUsbController {
 
     public void setChannelMode(int channel){
         String chan = "" + channel;
-        String msg = Command.channel_mode.replace("<channel>", chan);
+        String msg = SCommand.channel_mode.replace("<channel>", chan);
         System.out.print(msg + "***************************************");
         //usbController.sendMessage(iface, msg);
     }
 
     public void setSignalPolarity(int channel){
         String chan = "" + channel;
-        String msg = Command.signal_polarity.replace("<channel>", chan);
+        String msg = SCommand.signal_polarity.replace("<channel>", chan);
         System.out.print(msg + "***************************************");
         //usbController.sendMessage(iface, msg);
     }
 
     public void setSignalScale(int channel){
         String chan = "" + channel;
-        String msg = Command.signal_scale.replace("<channel>", chan);
+        String msg = SCommand.signal_scale.replace("<channel>", chan);
         System.out.print(msg + "***************************************");
         //usbController.sendMessage(iface, msg);
     }
 
     public void setSignalMode(int channel){
         String chan = "" + channel;
-        String msg = Command.signal_mode.replace("<channel>", chan);
+        String msg = SCommand.signal_mode.replace("<channel>", chan);
         System.out.print(msg + "***************************************");
         //usbController.sendMessage(iface, msg);
     }
@@ -58,7 +58,7 @@ public class SignalUsbController {
     public void setSignalFrequency(int channel, double freq){
         String chan = "" + channel;
         String frequency = "" + freq;
-        String msg = Command.signal_cw_frequency.replace("<channel>", chan);
+        String msg = SCommand.signal_cw_frequency.replace("<channel>", chan);
         msg = msg.replace("<freq>", frequency);
         System.out.print(msg + "***************************************");
         //usbController.sendMessage(iface, msg);
@@ -68,7 +68,7 @@ public class SignalUsbController {
     public void setSignalAmplitude(int channel, double amp){
         String chan = "" + channel;
         String amplitude = "" + amp;
-        String msg = Command.signal_amplitude.replace("<channel>", chan);
+        String msg = SCommand.signal_amplitude.replace("<channel>", chan);
         msg = msg.replace("<amp>", amplitude);
         System.out.print(msg + "***************************************");
         //usbController.sendMessage(iface, msg);
@@ -76,14 +76,14 @@ public class SignalUsbController {
 
     public void OutputOn(int channel){
         String chan = "" + channel;
-        String msg = Command.channel_on.replace("<channel>", chan);
+        String msg = SCommand.channel_on.replace("<channel>", chan);
         System.out.print(msg + "***************************************");
         //usbController.sendMessage(iface, msg);
     }
 
     public void OutputOff(int channel){
         String chan = "" + channel;
-        String msg = Command.channel_off.replace("<channel>", chan);
+        String msg = SCommand.channel_off.replace("<channel>", chan);
         System.out.print(msg + "***************************************");
         //usbController.sendMessage(iface, msg);
     }

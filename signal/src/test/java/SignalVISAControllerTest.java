@@ -23,22 +23,16 @@ public class SignalVISAControllerTest {
         signalVISAController.initController("ASRL2::INSTR");
         String id = signalVISAController.readID();
         System.out.println("device id:" + id);
-        signalVISAController.setChannelMode(1);
-        Thread.sleep(360);
-        signalVISAController.setSignalPolarity(1);
-        Thread.sleep(120);
-        signalVISAController.setSignalScale(1);
-        Thread.sleep(120);
-        signalVISAController.setSignalMode(1);
-        Thread.sleep(100);
+        signalVISAController.initSignalChannel(1);
         signalVISAController.setSignalFrequency(1,2.6);
         Thread.sleep(50);
         signalVISAController.setSignalAmplitude(1,2.4);
         Thread.sleep(100);
         signalVISAController.OutputOn(1);
-        Thread.sleep(20);
+        Thread.sleep(5000);
         signalVISAController.OutputOff(1);
         Thread.sleep(20);
+        signalVISAController.closeController();
 
     }
 }

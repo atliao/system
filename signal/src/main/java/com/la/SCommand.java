@@ -4,7 +4,7 @@ package com.la;
  * @author LA
  * @createDate 2023-02-13-16:45
  */
-public class Command {
+public class SCommand {
 
     public static char nl = '\n';
 

@@ -37,9 +37,26 @@ public class COM3Test {
 
                             String str = portController.readmessage(serialport);
                             System.out.println(curTime + "-> " + str);
-                            char nl = 10;
                             if(str.equals("*IDN?\n")){
-                                portController.sendmessage(serialport,"ID: 15184335457" + nl);
+                                portController.sendmessage(serialport,"ID: 15184335457\n");
+                            }
+                            if(str.equals("FMOD?\n")){
+                                portController.sendmessage(serialport, "0\n");
+                            }
+                            if(str.equals("SLVL?\n")){
+                                portController.sendmessage(serialport,"2.0\n");
+                            }
+                            if(str.equals("ISRC?\n")){
+                                portController.sendmessage(serialport, "0\n");
+                            }
+                            if(str.equals("OUTP? 3\n")){
+                                portController.sendmessage(serialport, "2.14567\n");
+                            }
+                            if(str.equals("FOUT? 1\n")){
+                                portController.sendmessage(serialport, "1\n");
+                            }
+                            if(str.equals("LOCL?\n")){
+                                portController.sendmessage(serialport, "1\n");
                             }
                         }
                     });
